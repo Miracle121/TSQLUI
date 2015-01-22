@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../assets/css/MyStyle.css"/>
+    <link rel="stylesheet" href="../modules/newProject/assets/js/treeView/angular.treeview.css"/>
+    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../modules/newProject/assets/css/newProject.css">
+    <link rel="stylesheet" href="../modules/newProject/assets/css/treeView.css"/>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand"><a href="#/">ezData</a></div>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+        </div>
+    </div>
+</nav>
+
+<!-- Begin page content -->
+<div class="container">
+    <div class="page-header">
+        <div ng-app="etl">
+
+            <ng-view></ng-view>
+
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">ezData - 2015 </p>
+    </div>
+</footer>
+
+<script src="../../../vendors/angular/angular.min.js"></script>
+<script src="../../../vendors/angular/angular-route.min.js"></script>
+<script src="../etl.module.js"></script>
+<script src="../controllers/etlCtrl.js"></script>
+<script src="../../etl/modules/newProject/newProject.module.js"></script>
+<script src="../modules/newProject/controllers/tableChooseCtrl.js"></script>
+<script src="../modules/newProject/controllers/dataConfigurationCtrl.js"></script>
+<script src="../modules/newProject/controllers/dataSourceChooseCtrl.js"></script>
+<script src="../modules/dataSource/startScreen.module.js"></script>
+<script src="../directives/Pagination/dirPagination.js"></script>
+<script src="../modules/dataSource/directives/RDMS/RDMS.js"></script>
+<script src="../modules/dataSource/directives/social/social.js"></script>
+<script src="../modules/dataSource/directives/file/file.js"></script>
+<script src="../modules/newProject/assets/js/treeView/angular.treeview.js"></script>
+<script src="../modules/newProject/newProject.module.js"></script>
+<script src="../modules/newProject/directives/RDMS/RDMS.js"></script>
+<script src="../modules/newProject/directives/file/file.js"></script>
+<script src="../modules/newProject/directives/social/social.js"></script>
+
+<script>
+
+    $('#myTab a[href="#profile"]').tab('show') // Select tab by name
+    $('#myTab a:first').tab('show') // Select first tab
+    $('#myTab a:last').tab('show') // Select last tab
+    $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
+
+</script>
+
+</body>
+</html>

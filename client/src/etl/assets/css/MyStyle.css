@@ -1,0 +1,46 @@
+.ezData {
+    margin-left: 25px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: solid 1px blue;
+    height: 35px;
+    width: 80px;
+    padding-left: 10px;
+    padding-top: 3px;
+    background-color: rgb(249, 234, 253);;
+}
+
+.divOutTable {
+    margin-left: 180px;
+    margin-top: 51px;
+    width: 800px;
+}
+
+.newProject {
+
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+#addButton {
+    margin-left: 1100px;
+    margin-top: -50px;
+}
+
+.newInput {
+    marginTop: 3px;
+    width: 50px;
+}
+
+.newInput {
+    min-height: 40px;
+    border-radius: 10px;
+}
+
+.editedInput {
+    min-height: 30px;
+    min-width: 30px;
+    max-width: 80px;
+}

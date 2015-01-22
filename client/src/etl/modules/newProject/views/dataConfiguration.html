@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../../../assets/css/bootstrap/bootstrap-theme.min.css"/>
+
+    <link rel="stylesheet" href="../../../assets/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="dataConfiguration.css"/>
+</head>
+<body>
+<div class="modal-dialog" ng-app="etl.newProject" ng-controller="configuration">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Configuration</h4>
+        </div>
+        <div class="modal-body">
+            <div id="Confige">
+                <form id="ConfigeForm" name="configform" class="form-horizontal">
+
+                    <div class="form-group">
+                        <label for="Locale"> Locale </label>
+                        <select id='Locale' class="form-control" ng-model="Configutation.locale"
+                                ng-options="f as f.Value for f in locale">
+                            <option></option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Time-zone">Time-zone</label>
+                        <select id='Time-zone' class="form-control" ng-model="Configutation.timezone"
+                                ng-options=" f as f.Value for f in timezone">
+                            <option></option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Encoding">Encoding</label>
+                        <select id='Encoding' class="form-control" ng-model="Configutation.encoding"
+                                ng-options="f as f.Value for f in encoding">
+                            <option></option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Data Limitation">Data Limitation</label>
+                        <br>
+                        <input type="text" id="Data Limitation" name="Protsent"
+                               ng-model="Configutation.Datalimitation" class="form-control"
+                               ng-pattern="/^[0-9a-zA-Z]+\%|(MB)|(KB)$/" class="my-input" required>
+
+                        <div class="bg-danger" ng-show="configform.Protsent.$error.pattern">Value should be in
+                            format #####%
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="testClick()">Go Back</button>
+            <button type="button" class="btn btn-primary" ng-click="configpost()" ng-disabled="configform.$invalid">
+                Next
+            </button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="../../../../../vendors/angular/angular.min.js"></script>
+<script src="../../../../../vendors/angular/angular-route.min.js"></script>
+<script src="../newProject.module.js"></script>
+<script src="../controllers/dataConfigurationCtrl.js"></script>
+</html>

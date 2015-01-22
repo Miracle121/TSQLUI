@@ -1,0 +1,65 @@
+<form>
+
+    <div id="FileDiv">
+        <form id="FileForm" class="form-horizontal">
+            <fieldset>
+                <div class="component" data-content="<form class='form'>
+                            " data-title="Form Name" data-trigger="manual" data-html="true"><!-- Form Name -->
+                    <legend>New Connection</legend>
+                </div>
+                <tab>
+                    <tr>
+                        <td>
+                            Name: <input type="text" placeholder="Store Products CSV"/>
+                        </td>
+                    </tr>
+                    <br>
+
+                    <tr>
+                        <td>
+
+                            <div class="component" data-content="<form class='form'>
+
+                                    " data-title="Select Basic" data-trigger="manual" data-html="true">
+                                <!-- Select Basic -->
+                                <div class="control-group">
+                                    <label class="control-label" for="selectbasic">Type:</label>
+
+                                    <div class="controls">
+                                        <select id="selectbasic" name="selectbasic-0"
+                                                class="input-xlarge">
+                                            <option>CSV</option>
+                                            <option>Excel</option>
+                                            <option>XML</option>
+                                            <option>Access</option>
+                                            <option>JSON</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            File to Upload: <input type="file"/>
+                        </td>
+                    </tr>
+                    <br>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox"/> First row as header
+                        </td>
+                    </tr>
+                    <br> <br>
+
+                    <button type="submit" class="btn btn-primary btn-xs">Upload</button>
+                </tab>
+
+            </fieldset>
+        </form>
+    </div>
+
+</form>

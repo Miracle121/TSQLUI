@@ -1,0 +1,78 @@
+<div class="divOutTable" style="padding-top: 10px;">
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#/projectList">Projects</a></li>
+        <li><a href="#/dataSource">Data sources</a></li>
+    </ul>
+
+    <br>
+
+    <div>
+
+        <a href="#/newProject" class="btn btn-info">
+            New project
+        </a>
+
+        <br>
+        <br>
+
+        <table class="table table-responsive">
+            <tr>
+                <th ng-repeat="column in columns">
+                    {{column}}
+                </th>
+            </tr>
+
+            <!--Table Rows-->
+            <tr dir-paginate="project in ProjectList | itemsPerPage: 5">
+
+                <td>{{project.Id}}</td>
+                <td><a href="#" ng-click="takeId(project.Id)">{{project.Name}}</a></td>
+                <td> {{project.CreateDate| date:'yyyy-MM-dd'}}</td>
+                <td> {{project.ModifiedDate| date:'yyyy-MM-dd'}}</td>
+
+
+                <!--Save Cancel-->
+                <td ng-if="project.editing">
+                    <div class="btn-group">
+                        <div ng-click="saveEditService(project)"
+                             class="btn btn-primary">Save
+                        </div>
+
+                        <div ng-click="cancelEdit(project)"
+                             class="btn btn-danger">Cancel
+                        </div>
+                    </div>
+                </td>
+                <!--Edit Remove -->
+                <td ng-if="!project.editing">
+                    <div class="btn-group">
+                        <div ng-click="editService(project)"
+                             class="btn btn-primary" ng-model="editingProduct[column]">Edit
+                        </div>
+                        <div ng-click="removeService(project)"
+                             class="btn btn-danger">Remove
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <!--Add a new Button-->
+            <tr ng-if="addNew">
+
+                <td ng-repeat="column in columns">
+                    <input ng-model="addingProduct[column]" class="newInput" type="text"
+                           placeholder="{{column}}"/>
+                </td>
+
+                <td><input class="btn btn-primary" type="button" value="Save"
+                           ng-click="saveService(columns)"/></td>
+
+                <td><input class="btn btn-primary" type="button" value="Cancel" ng-click="cancelAddNew()"/></td>
+
+            </tr>
+        </table>
+
+    </div>
+
+    <dir-pagination-controls></dir-pagination-controls>
+</div>

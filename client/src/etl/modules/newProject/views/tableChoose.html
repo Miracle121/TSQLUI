@@ -1,0 +1,33 @@
+<style>
+
+
+</style>
+
+<div class="treeDiv">
+    <h4 style="margin-left: 150px;margin-top: 10px;margin-bottom: 10px;">Tree View of your DB</h4>
+
+    <div>
+
+        <div class="treeItem" data-ng-init="roleList = db">
+            <span><b>Selected Node</b> : {{mytree.currentNode.roleName}}</span>
+        </div>
+
+        <div
+                data-angular-treeview="true"
+                data-tree-id="mytree"
+                data-tree-model="roleList"
+                data-node-id="roleId"
+                data-node-label="roleName"
+                data-node-children="children">
+        </div>
+
+    </div>
+
+</div>
+
+<div style="margin-left: 800px;">
+    <a href="#/nextStepTransformation" class="btn btn-success"><< Go back</a>
+
+    <a href="#/config" class="btn btn-success">Next step >></a>
+
+</div>

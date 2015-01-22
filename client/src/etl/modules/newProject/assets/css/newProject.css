@@ -1,0 +1,42 @@
+.my-input {
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    background: transparent;
+}
+
+.my-input.ng-invalid {
+    color: white;
+    background: red;
+}
+
+.form-horizontal .form-group {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.RDMS img {
+    height: 40px;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: -3px;
+    width: 40px;
+    padding-right: 10px;
+}
+
+.Social img {
+    height: 40px;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: -3px;
+    width: 40px;
+    padding-right: 10px;
+}
+
+.File img {
+    height: 40px;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: -3px;
+    width: 40px;
+    padding-right: 10px;
+}
